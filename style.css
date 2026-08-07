@@ -1,0 +1,252 @@
+/* ==========================================
+   GOOGLE FONT & RESET
+========================================== */
+
+:root {
+    --primary-color: #4facfe;
+    --secondary-color: #00f2fe;
+    --white: #ffffff;
+    --text-color: #333333;
+    --glass: rgba(255,255,255,0.15);
+    --shadow: 0 10px 30px rgba(0,0,0,0.2);
+    --radius: 20px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+
+    padding:20px;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+/* ==========================================
+   WEATHER CARD
+========================================== */
+
+.weather-card{
+
+    width:100%;
+    max-width:420px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:var(--radius);
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+    color:var(--white);
+
+    text-align:center;
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.weather-card h1{
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+}
+
+/* ==========================================
+   SEARCH BOX
+========================================== */
+
+.search-box{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:30px;
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-size:16px;
+}
+
+.search-box button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    background:white;
+
+    color:#333;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.search-box button:hover{
+
+    background:#f1f1f1;
+
+    transform:scale(1.05);
+}
+
+/* ==========================================
+   WEATHER ICON
+========================================== */
+
+.weather-icon{
+
+    font-size:80px;
+
+    margin-bottom:15px;
+}
+
+/* ==========================================
+   TEMPERATURE
+========================================== */
+
+#temperature{
+
+    font-size:60px;
+
+    font-weight:700;
+}
+
+/* ==========================================
+   CITY
+========================================== */
+
+#city{
+
+    margin-top:10px;
+
+    font-size:30px;
+
+    font-weight:600;
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+#description{
+
+    margin-top:10px;
+
+    margin-bottom:30px;
+
+    font-size:18px;
+
+    text-transform:capitalize;
+}
+
+/* ==========================================
+   DETAILS
+========================================== */
+
+.details{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.detail-box{
+
+    flex:1;
+
+    background:rgba(255,255,255,.2);
+
+    padding:20px;
+
+    border-radius:15px;
+}
+
+.detail-box h4{
+
+    margin-bottom:10px;
+
+    font-size:18px;
+}
+
+.detail-box p{
+
+    font-size:20px;
+
+    font-weight:bold;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:500px){
+
+    .weather-card{
+
+        padding:20px;
+    }
+
+    .search-box{
+
+        flex-direction:column;
+    }
+
+    .details{
+
+        flex-direction:column;
+    }
+
+    #temperature{
+
+        font-size:50px;
+    }
+
+}
